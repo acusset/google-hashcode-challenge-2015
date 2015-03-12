@@ -4,9 +4,10 @@ public class Main {
 
     public static void main(String[] args) {
 
-        new Parseur().openFile();
-//        App app = new App();
-//        app.lecture();
+        String file = "dc.in";
+        Parseur parser = new Parseur(file);
+        parser.openFile();
+        parser.generate();
     }
 }
 

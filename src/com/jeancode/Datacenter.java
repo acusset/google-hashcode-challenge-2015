@@ -8,6 +8,5 @@ import java.util.ArrayList;
 public class Datacenter {
 
     ArrayList<Row> rows = new ArrayList<Row>();
-    ArrayList<Server> servers = new ArrayList<Server>();
 
 }
