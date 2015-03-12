@@ -18,7 +18,10 @@ public class Parseur {
         return true;
     }
 
-    
+    public boolean closeFile() {
+//        this.file;
+        return true;
+    }
 
     @Override
     public String toString() {
