@@ -7,15 +7,16 @@ import java.io.*;
  */
 public class Parseur {
 
-    private String fileName;
+    private String fileName = "dc.in";
     private File file;
 
     public Parseur(String fileName) {
         this.fileName = fileName;
     }
 
-    public boolean openFile() {
 
+    public boolean openFile() {
+//
         this.file = new File(this.fileName);
         if (!this.file.exists())
             return false;
@@ -46,6 +47,24 @@ public class Parseur {
 //                System.out.println(e.getMessage());
 //            }
         return true;
+    }
+
+    public void readme() {
+        try{
+            BufferedReader buff = new BufferedReader(new FileReader(this.file));
+
+            try {
+                String line;
+                while ((line = buff.readLine()) != null) {
+                    System.out.println(line);
+                    //TODO
+                }
+            } finally {
+                buff.close();
+            }
+        } catch (IOException ioe) {
+            System.out.println("Erreur --" + ioe.toString());
+        }
     }
 
     public boolean closeFile() {
