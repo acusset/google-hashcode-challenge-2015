@@ -1,5 +1,7 @@
 package com.jeancode;
 
+import java.io.File;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -7,8 +9,9 @@ public class Main {
         String file = "dc.in";
         Parseur parser = new Parseur(file);
         System.out.println(parser.openFile());
+        parser.readme();
 
-        parser.popule(new Datacenter());
+        //parser.popule(new Datacenter());
     }
 }
 
