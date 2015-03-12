@@ -1,3 +1,5 @@
+package com.jeancode;
+
 /**
  * Created by Antoine on 12/03/2015.
  */
@@ -29,7 +31,7 @@ public class Cellule {
 
     @Override
     public String toString() {
-        return "Cellule{" +
+        return "com.jeancode.Cellule{" +
                 "dispo=" + dispo +
                 ", occupee=" + occupee +
                 '}';
