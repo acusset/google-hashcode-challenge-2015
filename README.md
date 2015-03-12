@@ -1,0 +1,2 @@
+# hashcodeJava
+hashcode Java power
