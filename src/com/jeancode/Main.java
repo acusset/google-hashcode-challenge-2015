@@ -6,8 +6,9 @@ public class Main {
 
         String file = "dc.in";
         Parseur parser = new Parseur(file);
-        parser.openFile();
-        parser.generate();
+        System.out.println(parser.openFile());
+
+        parser.popule(new Datacenter());
     }
 }
 

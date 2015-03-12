@@ -8,20 +8,14 @@ import java.io.*;
 public class Parseur {
 
     private String fileName;
-
-    public Parseur(String fileName) {
-        this.fileName = fileName;
-    }
-
-//    private File file;
-
+    private File file;
 
     public Parseur(String fileName) {
         this.fileName = fileName;
     }
 
     public boolean openFile() {
-//
+
         this.file = new File(this.fileName);
         if (!this.file.exists())
             return false;
