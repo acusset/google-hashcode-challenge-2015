@@ -7,7 +7,24 @@ import java.io.File;
  */
 public class Parseur {
 
-    private String fileName;
+    private String fileName = "dc.in";
     private File file;
 
+    public boolean openFile() {
+        this.file = new File(this.fileName);
+        if (!this.file.exists())
+            return false;
+        System.out.println(this.fileName + " is open");
+        return true;
+    }
+
+    
+
+    @Override
+    public String toString() {
+        return "Parseur{" +
+                "fileName='" + fileName + '\'' +
+                ", file=" + file +
+                '}';
+    }
 }

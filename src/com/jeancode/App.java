@@ -6,5 +6,5 @@ package com.jeancode;
 public class App {
 
     private Parseur parseur;
-        
+
 }
