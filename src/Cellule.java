@@ -27,6 +27,11 @@ public class Cellule {
         this.occupee = occupee;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "Cellule{" +
+                "dispo=" + dispo +
+                ", occupee=" + occupee +
+                '}';
+    }
 }

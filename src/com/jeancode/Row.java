@@ -21,4 +21,11 @@ public class Row {
     public void setBlocs(int blocs) {
         this.blocs = blocs;
     }
+
+    @Override
+    public String toString() {
+        return "Row{" +
+                "blocs=" + blocs +
+                '}';
+    }
 }

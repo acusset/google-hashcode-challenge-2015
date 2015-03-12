@@ -40,4 +40,12 @@ public class Server {
         this.groupe = groupe;
     }
 
+    @Override
+    public String toString() {
+        return "Server{" +
+                "taille=" + taille +
+                ", capacite=" + capacite +
+                ", groupe=" + groupe +
+                '}';
+    }
 }
