@@ -3,12 +3,12 @@ package com.jeancode;
 /**
  * Created by Antoine on 12/03/2015.
  */
-public class Cellule {
+public class Cell {
 
     private boolean dispo;
     private boolean occupee;
 
-    public Cellule(boolean dispo, boolean occupee) {
+    public Cell(boolean dispo, boolean occupee) {
         this.dispo = dispo;
         this.occupee = occupee;
     }
@@ -31,7 +31,7 @@ public class Cellule {
 
     @Override
     public String toString() {
-        return "com.jeancode.Cellule{" +
+        return "com.jeancode.Cell{" +
                 "dispo=" + dispo +
                 ", occupee=" + occupee +
                 '}';

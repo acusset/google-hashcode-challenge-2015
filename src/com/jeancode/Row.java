@@ -1,5 +1,7 @@
 package com.jeancode;
 
+import java.util.ArrayList;
+
 /**
  * Created by Antoine on 12/03/2015.
  */
