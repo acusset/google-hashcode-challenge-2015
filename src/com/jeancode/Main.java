@@ -40,6 +40,7 @@ public class Main {
             }
             row1.ajouteRandomSer(server);
         }
+        /* Normalement les serveurs sont triés */
 
         /* Ecriture de la solution */
 

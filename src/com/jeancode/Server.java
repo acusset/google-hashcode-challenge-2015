@@ -9,14 +9,19 @@ public class Server implements Comparable {
     private int capacite;
     private int groupe;
     private int ratio;
+    private static int id;
 
     public Server(int taille, int capacite, int groupe) {
 
         this.taille = taille;
         this.capacite = capacite;
         this.groupe = groupe;
-
         this.ratio = capacite/taille;
+        this.id ++;
+    }
+
+    public int getId() {
+        return id;
     }
 
     public int getTaille() {

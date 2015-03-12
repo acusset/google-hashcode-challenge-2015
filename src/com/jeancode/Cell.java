@@ -7,6 +7,15 @@ public class Cell {
 
     private boolean dispo;
     private boolean occupee;
+    private int serverID;
+
+    public int getServerID() {
+        return serverID;
+    }
+
+    public void setServerID(int serverID) {
+        this.serverID = serverID;
+    }
 
     public Cell(boolean dispo, boolean occupee) {
         this.dispo = dispo;

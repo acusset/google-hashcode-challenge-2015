@@ -63,18 +63,20 @@ public class Row {
         }
     }
 
-    public void remplirNextCell(int i, int next) {
+    public void remplirNextCell(int i, int next, int id) {
         if (!areNextCellsOccup(i,next)) {
             for (int j = 0; j < next; j++) {
                 cells.get(i).setOccupee(true);
+                cells.get(i).setServerID(id);
             }
         }
     }
 
     public boolean ajouteServer(int i, Server server) {
         int taille = server.getTaille();
+        int serverid = server.getId();
         if (!areNextCellsOccup(i, taille) && !areNextCellsDispo(i, taille)) {
-            remplirNextCell(i,taille);
+            remplirNextCell(i,taille, serverid);
             return true;
         } else {
             return false;
@@ -84,10 +86,11 @@ public class Row {
     public boolean ajouteRandomSer(Server server) {
         boolean tmp = false;
         int tailleRow = this.size;
+        int serverid = server.getId();
         int taille = server.getTaille();
         for (int j=0; j<tailleRow-taille;j++) {
             if (!areNextCellsOccup(j, taille) && !areNextCellsDispo(j, taille)) {
-                remplirNextCell(j,taille);
+                remplirNextCell(j,taille, serverid);
                 tmp = true;
                 break;
             } else {
