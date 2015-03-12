@@ -45,7 +45,7 @@ public class Datacenter {
         this.rows.set(i, row);
     }
 
-    public void setServer(int i, Server server) {
-        this.server.get(i, server);
-    }
+//    public void setServer(int i, Server server) {
+//        this.server.get(i, server);
+//    }
 }
