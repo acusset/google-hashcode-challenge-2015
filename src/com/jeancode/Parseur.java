@@ -7,7 +7,12 @@ import java.io.*;
  */
 public class Parseur {
 
-    private String fileName = "dc.in";
+    private String fileName;
+
+    public Parseur(String fileName) {
+        this.fileName = fileName;
+    }
+
 //    private File file;
 
     public boolean openFile() {
