@@ -3,7 +3,7 @@ package com.jeancode;
 /**
  * Created by Antoine on 12/03/2015.
  */
-public class Server {
+public class Server implements Comparable {
 
     private int taille;
     private int capacite;
@@ -49,6 +49,23 @@ public class Server {
 
     public void setRatio(int ratio) {
         this.ratio = ratio;
+    }
+
+
+    @Override
+    public int compareTo(Object o) {
+        if(o instanceof Server) {
+            Server server = (Server)o;
+            if (server.getRatio() < this.ratio) {
+                return -1;
+            } else if (this.ratio == server.getRatio()) {
+                return 0;
+            } else {
+                return 1;
+            }
+
+        }
+        return 0;
     }
 
     @Override

@@ -29,6 +29,74 @@ public class Row {
         return cells;
     }
 
+    public boolean isCellOccupee (int i) {
+        return cells.get(i).isOccupee();
+    }
+
+    public boolean isCellDisponnible (int i) {
+        return cells.get(i).isDispo();
+    }
+
+    public boolean areNextCellsDispo (int i, int next) {
+        boolean tmp = true;
+        for (int j=0; i<next; j++) {
+            if (cells.get(i).isDispo() == false) {
+                return false;
+            }
+        }
+        return tmp;
+    }
+
+    public boolean areNextCellsOccup (int i, int next) {
+        boolean tmp = false;
+        for (int j=0; i<next; j++) {
+            if (cells.get(i).isOccupee() == true) {
+                return true;
+            }
+        }
+        return tmp;
+    }
+
+    public void remplirCell(int i) {
+        if (!isCellOccupee(i)) {
+            cells.get(i).setOccupee(true);
+        }
+    }
+
+    public void remplirNextCell(int i, int next) {
+        if (!areNextCellsOccup(i,next)) {
+            for (int j = 0; j < next; j++) {
+                cells.get(i).setOccupee(true);
+            }
+        }
+    }
+
+    public boolean ajouteServer(int i, Server server) {
+        int taille = server.getTaille();
+        if (!areNextCellsOccup(i, taille) && !areNextCellsDispo(i, taille)) {
+            remplirNextCell(i,taille);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public boolean ajouteRandomSer(Server server) {
+        boolean tmp = false;
+        int tailleRow = this.size;
+        int taille = server.getTaille();
+        for (int j=0; j<tailleRow-taille;j++) {
+            if (!areNextCellsOccup(j, taille) && !areNextCellsDispo(j, taille)) {
+                remplirNextCell(j,taille);
+                tmp = true;
+                break;
+            } else {
+                tmp = false;
+            }
+        }
+        return tmp;
+    }
+
     public void setCells(ArrayList<Cell> cells) {
         this.cells = cells;
     }
