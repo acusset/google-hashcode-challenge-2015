@@ -1,5 +1,7 @@
 package com.jeancode;
 
+import java.io.File;
+
 import java.util.ArrayList;
 
 public class Main {
@@ -12,8 +14,10 @@ public class Main {
         Parseur parser = new Parseur(file);
         System.out.println(parser.openFile());
         parser.readme();
+        parser.readme();
 //        parser.popule(datacenter);
 
+        //parser.popule(new Datacenter());
         Datacenter datacenter = new Datacenter();
         ArrayList<Row> rows = datacenter.getRows();
         ArrayList<Server> servers = datacenter.getServer();
