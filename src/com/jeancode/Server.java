@@ -7,17 +7,7 @@ public class Server {
 
     private int taille;
     private int capacite;
-
-    public int getRatio() {
-        return ratio;
-    }
-
-    public void setRatio(int ratio) {
-        this.ratio = ratio;
-    }
-
     private int groupe;
-
     private int ratio;
 
     public Server(int taille, int capacite, int groupe) {
@@ -51,6 +41,14 @@ public class Server {
 
     public void setGroupe(int groupe) {
         this.groupe = groupe;
+    }
+
+    public int getRatio() {
+        return ratio;
+    }
+
+    public void setRatio(int ratio) {
+        this.ratio = ratio;
     }
 
     @Override

@@ -5,27 +5,36 @@ package com.jeancode;
  */
 public class Row {
 
-    private int blocs;
+    private int size;
+    private ArrayList<Cell> cells;
 
     /*TODO ajouter un tableau de cellules*/
 
-    public Row(int blocs) {
-        this.blocs = blocs;
+    public Row(int size) {
+        this.size = size;
     }
 
-    public int getBlocs() {
+    public int getSize() {
 
-        return blocs;
+        return size;
     }
 
-    public void setBlocs(int blocs) {
-        this.blocs = blocs;
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public ArrayList<Cell> getCells() {
+        return cells;
+    }
+
+    public void setCells(ArrayList<Cell> cells) {
+        this.cells = cells;
     }
 
     @Override
     public String toString() {
         return "Row{" +
-                "blocs=" + blocs +
+                "size=" + size +
                 '}';
     }
 }
